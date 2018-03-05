@@ -41,6 +41,7 @@ class GameObjectList : GameObject
 
     public override void Update(GameTime gameTime)
     {
+        base.Update(gameTime);
         foreach (GameObject gameObject in children)
             gameObject.Update(gameTime);
     }
