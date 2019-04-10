@@ -10,18 +10,23 @@ namespace FlappyBird.GameStates {
     class PlayingState : GameObjectList {
 		int frameCounter;
 		GameObjectList pipes;
-        Bird flappy; 
+        Bird flappy;
+		int score;
+
 
         public PlayingState() {
             SpriteGameObject background = new SpriteGameObject("spr_background");
 			flappy = new Bird();
 			pipes = new GameObjectList();
+			//TextGameObject score = new TextGameObject(new Vector2(300, 50));
+			score = 0;
 
 			frameCounter = 0;
 
             this.Add(background);
             this.Add(flappy);
 			this.Add(pipes);
+
         }
 
         public override void Update(GameTime gameTime)
@@ -41,6 +46,10 @@ namespace FlappyBird.GameStates {
 				if(checkPipe.Overlaps(flappy)) {
 					isGameOver = true;
 				}
+				/*if(checkPipe.position.X + checkPipe.upperPipe.texture.Width < flappy.position.X) {
+					score++;
+				}*/
+
 			}
 
 			if(flappy.position.X > GameEnvironment.Screen.X ||
