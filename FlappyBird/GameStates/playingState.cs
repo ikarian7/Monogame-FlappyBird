@@ -59,6 +59,7 @@ namespace FlappyBird.GameStates {
 			flappy.Reset();
 			pipes.Children.Clear();
 			frameCounter = 0;
+			FlappyBird.SwitchTo(2);
 		}
     }
 }

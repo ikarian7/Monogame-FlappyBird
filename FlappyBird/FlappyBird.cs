@@ -28,9 +28,10 @@ namespace FlappyBird
             ApplyResolutionSettings();
 
 
-            // TODO: Add gamestates here
-            gameStateList.Add(new PlayingState());
-			gameStateList.Add(new GameOverState());
+			// TODO: Add gamestates here
+			gameStateList.Add(new TitleScreenState()); //0
+            gameStateList.Add(new PlayingState()); //1
+			gameStateList.Add(new GameOverState()); //2
             SwitchTo(0);
         }
       

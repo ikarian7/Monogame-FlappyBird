@@ -7,19 +7,20 @@ using FlappyBird.GameObjects;
 using Microsoft.Xna.Framework;
 
 namespace FlappyBird.GameStates {
-    class GameOverState : GameObjectList {
-        int frameCounter;
-        GameObjectList pipes;
-        Bird flappy;
-
-        public GameOverState() {
-            SpriteGameObject background = new SpriteGameObject("spr_gameover");
+    class TitleScreenState : GameObjectList {
+        public TitleScreenState() {
+            SpriteGameObject background = new SpriteGameObject("spr_titlescreen");
 
             this.Add(background);
         }
 
-        public override void Update(GameTime gameTime) {
-            base.Update(gameTime);
-        }
-    }
+		public override void HandleInput(InputHelper inputHelper) {
+			base.HandleInput(inputHelper);
+
+			if (inputHelper.AnyKeyPressed)
+			{
+				FlappyBird.SwitchTo(1);
+			}
+		}
+	}
 }
