@@ -1,4 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using FlappyBird.GameStates;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -20,8 +27,10 @@ namespace FlappyBird
             screen.Y = 480;
             ApplyResolutionSettings();
 
-            // TODO: Add gamestates here
 
+            // TODO: Add gamestates here
+            gameStateList.Add(new PlayingState());
+            SwitchTo(0);
         }
       
     }

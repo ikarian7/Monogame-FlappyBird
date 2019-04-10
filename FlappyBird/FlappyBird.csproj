@@ -48,6 +48,9 @@
     <Compile Include="GameManagement\InputHelper.cs" />
     <Compile Include="GameManagement\RotatingSpriteGameObject.cs" />
     <Compile Include="GameManagement\SpriteGameObject.cs" />
+    <Compile Include="GameObjects\Bird.cs" />
+    <Compile Include="GameObjects\Pipe.cs" />
+    <Compile Include="GameStates\PlayingState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,16 +62,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\spr_background.png" />
+    <Content Include="Content\spr_bird.png" />
+    <Content Include="Content\spr_gameover.png" />
+    <Content Include="Content\spr_pipe_lower.png" />
+    <Content Include="Content\spr_pipe_upper.png" />
+    <Content Include="Content\spr_titlescreen.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
+    <None Include="Content\GameFont.spritefont" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GameObjects\" />
-    <Folder Include="GameStates\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
