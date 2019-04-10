@@ -30,6 +30,7 @@ namespace FlappyBird
 
             // TODO: Add gamestates here
             gameStateList.Add(new PlayingState());
+			gameStateList.Add(new GameOverState());
             SwitchTo(0);
         }
       

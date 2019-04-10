@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="FlappyBird.cs" />
+    <Compile Include="GameManagement\TextGameObject.cs" />
     <Compile Include="GameManagement\GameEnvironment.cs" />
     <Compile Include="GameManagement\GameObject.cs" />
     <Compile Include="GameManagement\GameObjectList.cs" />
@@ -50,6 +51,8 @@
     <Compile Include="GameManagement\SpriteGameObject.cs" />
     <Compile Include="GameObjects\Bird.cs" />
     <Compile Include="GameObjects\Pipe.cs" />
+    <Compile Include="GameStates\TitleScreenState.cs" />
+    <Compile Include="GameStates\GameOverState.cs" />
     <Compile Include="GameStates\PlayingState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
