@@ -25,5 +25,14 @@ namespace FlappyBird.GameObjects {
 			position.Y = random.Next(0, 200);
 			//position.Y = random.Next(200, 400);
 		}
+
+		public bool Overlaps(SpriteGameObject other) {
+			foreach(SpriteGameObject pipe in Children) {
+                if(pipe.Overlaps(other)) {
+					return true;
+				}
+			}
+			return false;
+		}
 	}
 }

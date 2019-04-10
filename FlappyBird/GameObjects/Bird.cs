@@ -8,21 +8,18 @@ using System.Threading.Tasks;
 
 namespace FlappyBird.GameObjects {
     class Bird : SpriteGameObject {
-        //InputHelper inputHelper;
         Vector2 startPosition;
 
         public Bird() : base("spr_bird") {
             startPosition = new Vector2(FlappyBird.Screen.X/2, FlappyBird.Screen.Y/2);
-            position = startPosition;
             Reset();
-            //inputHelper = new InputHelper();
-
         }
 
         public override void Reset() {
             base.Reset();
             velocity = new Vector2(0);
-        }
+			position = startPosition;
+		}
 
         public override void Update(GameTime gameTime) {
             
